@@ -153,15 +153,16 @@ nav {
         height: auto;
         .item {
             width: 90%;
-            height: 12em;
-            margin-left: 2em;
-            margin-right: 2em;
+            height: auto;
+            margin: 2em;
             h1 {
-                font-size: 1.5em;
+                font-size: 2em;
+                margin: 0;
             }
             p {
                 color: $dkgrey;
                 font-size: 1em;
+                margin: 0;
             }
         }
     }
@@ -197,3 +198,19 @@ nav {
 body {
     font-family: 'Fira Sans', sans-serif;
 }
+
+/* ---------- Media Queries ---------- */
+
+// Breakpoint 2
+@media only screen and (min-width: 479px) {
+
+}
+// Breakpoint 3
+@media only screen and (min-width: 767px) {
+
+}
+// Breakpoint 4
+@media only screen and (min-width: 978px) {
+
+}
+

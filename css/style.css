@@ -111,14 +111,15 @@ nav {
     height: auto; }
     .container .info .item {
       width: 90%;
-      height: 12em;
-      margin-left: 2em;
-      margin-right: 2em; }
+      height: auto;
+      margin: 2em; }
       .container .info .item h1, .container .info .item .pricing .card-green .top .centerer h2, .container .pricing .card-green .top .centerer .info .item h2, .container .info .item .pricing .card-blue .top .centerer h2, .container .pricing .card-blue .top .centerer .info .item h2, .container .info .item .pricing .card-black .top .centerer h2, .container .pricing .card-black .top .centerer .info .item h2, .container .info .item .pricing .card-green .top .centerer h3, .container .pricing .card-green .top .centerer .info .item h3, .container .info .item .pricing .card-blue .top .centerer h3, .container .pricing .card-blue .top .centerer .info .item h3, .container .info .item .pricing .card-black .top .centerer h3, .container .pricing .card-black .top .centerer .info .item h3 {
-        font-size: 1.5em; }
+        font-size: 2em;
+        margin: 0; }
       .container .info .item p, .container .info .item .footer a, .footer .container .info .item a {
         color: #888888;
-        font-size: 1em; }
+        font-size: 1em;
+        margin: 0; }
 
 .footer {
   margin-top: 3em;
@@ -145,5 +146,7 @@ nav {
 
 body {
   font-family: 'Fira Sans', sans-serif; }
+
+/* ---------- Media Queries ---------- */
 
 /*# sourceMappingURL=style.css.map */
