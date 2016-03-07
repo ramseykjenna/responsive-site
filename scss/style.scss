@@ -17,6 +17,12 @@ $indigo: #2C4985;
     transform: translate(-50%, -50%);
 }
 
+@mixin h-center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 
 /* ---------- Nav ---------- */
 
@@ -27,8 +33,9 @@ nav {
     .logo {
         position: relative;
         float: left;
-        width: 6em;
+        width: 4em;
         height: 3em;
+        font-size: .75em;
         i {
             @include centerer;
             color: $dkgrey;
@@ -61,7 +68,7 @@ nav {
     margin-bottom: 4em;
     h1 {
         color: $white;
-        font-size: 2em;
+        font-size: 1.5em;
         margin: 0;
         text-align: center;
         white-space: nowrap;
@@ -75,12 +82,11 @@ nav {
     width: 100%;
     .pricing {
         .card-green {
-            margin-left: 1em;
-            margin-right: 1em;
             border: 1px solid $mdgrey;
             border-radius: 5px;
             max-resolution: res;
             margin-bottom: 2em;
+            width: 100%;
             .top {
                 background-color: $forest;
                 height: 16em;
@@ -94,10 +100,11 @@ nav {
                         color: $white;
                         margin-top: 0;
                         margin-bottom: 0;
+                        font-size: 1.25em;
                     }
                     h2 {
                         @extend h1;
-                        font-size: 7em;
+                        font-size: 6em;
                     }
                     h3 {
                         @extend h1;
@@ -116,6 +123,7 @@ nav {
                     border-bottom: 1px solid $mdgrey;
                     span {
                         @include centerer;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -178,7 +186,7 @@ nav {
     position: relative;
     p {
         color: $dkgrey;
-        font-size: 1em;
+        font-size: .75em;
         display: inline;
         white-space: nowrap;
     }
@@ -197,20 +205,79 @@ nav {
 
 body {
     font-family: 'Fira Sans', sans-serif;
+    position: relative;
 }
+
 
 /* ---------- Media Queries ---------- */
 
 // Breakpoint 2
 @media only screen and (min-width: 479px) {
-
+    nav {
+        .logo {
+            width: 6em;
+            font-size: 1em;
+        }
+    }
+    .header {
+        h1 {
+            font-size: 2.5em;
+        }
+    }
+    .footer {
+        p {
+            font-size: 1em;
+        }
+    }
 }
+
 // Breakpoint 3
 @media only screen and (min-width: 767px) {
-
+    .header {
+        height: 23em;
+        h1 {
+            font-size: 3em;
+        }
+    }
+    .container {
+        position: relative;
+        .pricing {
+            @include h-center;
+            .card-green {
+                width: 31.5%;
+                display: inline-block;
+                margin: 0 .6% 3em .6%;
+                .top {
+                    .centerer {
+                        h1 {
+                            font-size: 1em;
+                        }
+                        h2 {
+                            font-size: 5em;
+                        }
+                    }
+                }
+            }
+            .details {
+                .card-section {
+                    font-size: .7em;
+                }
+            }
+        }
+        .info {
+            .item {
+                margin: 1em;
+                width: 45%;
+                display: inline-block;
+                vertical-align: top;
+                h1 {
+                    font-size: 1.5em;
+                    margin-bottom: .2em;
+                }
+            }
+        }
+    }
 }
+
 // Breakpoint 4
-@media only screen and (min-width: 978px) {
-
-}
-
+@media only screen and (min-width: 978px) {}
